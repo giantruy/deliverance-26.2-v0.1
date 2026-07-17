@@ -3,7 +3,7 @@
 	"id": "quest",
 	"version": "${version}",
 	"name": "Deliverance",
-	"description": "This is a mod that adds an optional quest storyline to Minecraft, while keeping it relatively vanilla. It shows the stories of Staffan, Sandra, Harald, and Mark",
+	"description": "This is a mod that adds an optional quest storyline to Minecraft, heavily inspired by vanilla Minecraft. It shows the stories of Staffan, Sandra, Harald, and Mark",
 	"authors": [
 		"CinnamonRoll!"
 	],
@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"net.gy.quest.DeliveranceDataGenerator"
+		],
+		"client": [
+			"net.gy.quest.DeliveranceClient"
 		]
 	},
 	"mixins": [
@@ -27,7 +30,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.19.3",
-		"minecraft": "~26.2",
+		"minecraft": "~26.1.2",
 		"java": ">=25",
 		"fabric-api": "*"
 	}

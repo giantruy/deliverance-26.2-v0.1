@@ -2,10 +2,10 @@ package net.gy.quest.datagen;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.gy.quest.block.ModBlocks;
 import net.gy.quest.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
-import net.minecraft.client.data.models.model.ModelTemplate;
 import net.minecraft.client.data.models.model.ModelTemplates;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -17,6 +17,10 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
+        blockModelGenerators.createTrivialCube(ModBlocks.ANCIENT_STONE_BRICKS);
+        blockModelGenerators.createTrivialCube(ModBlocks.RUNESTONE_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.RUNESTONE_BLOCK);
+        blockModelGenerators.createTrivialCube(ModBlocks.POLISHED_RUNESTONE_BLOCK);
 
     }
 
@@ -29,6 +33,17 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.NETHERITE_CORE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.SPIDER_CORE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.CURSED_BOOK, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.RUNESTONE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.POLISHED_RUNESTONE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.RUNESTONE_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.RUNESTONE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.RUNESTONE_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.RUNESTONE_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.RUNESTONE_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateSpear(ModItems.RUNESTONE_SPEAR);
+        itemModelGenerators.generateFlatItem(ModItems.RUNESTONE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.STORY_BOOK, ModelTemplates.FLAT_ITEM);
+
 
     }
 }

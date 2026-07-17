@@ -6,5 +6,22 @@
   "item.quest.netherite_core": "Netherite Core",
   "item.quest.spider_core": "Spider Core",
   "item.quest.cursed_book": "Cursed Book",
-  "creativemodetab.quest.deliverance_items": "Deliverance Items"
+  "item.quest.runestone": "Runestone",
+  "item.quest.polished_runestone": "Polished Runestone",
+  "item.quest.runestone_sword": "Runestone Sword",
+  "item.quest.runestone_spear": "Runestone Spear",
+  "item.quest.runestone_pickaxe": "Runestone Pickaxe",
+  "item.quest.runestone_axe": "Runestone Axe",
+  "item.quest.runestone_shovel": "Runestone Shovel",
+  "item.quest.runestone_hoe": "Runestone Hoe",
+  "item.quest.runestone_upgrade_smithing_template": "Runestone Upgrade Smithing Template",
+  "item.quest.story_book": "Story Book",
+  "creativemodetab.quest.deliverance_items": "Deliverance",
+  "block.quest.ancient_stone_bricks": "Ancient Stone Bricks",
+  "block.quest.staffans_crafter": "Staffan's Crafter",
+  "block.quest.runestone_ore": "Runestone Ore",
+  "block.quest.runestone_block": "Runestone Block",
+  "block.quest.polished_runestone_block": "Polished Runestone Block",
+  "container.quest.staffans_crafter": "Staffan's Crafter",
+  "effect.quest.electrocuted": "Electrocuted"
 }

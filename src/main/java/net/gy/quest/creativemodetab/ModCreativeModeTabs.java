@@ -2,6 +2,7 @@ package net.gy.quest.creativemodetab;
 
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.gy.quest.Deliverance;
+import net.gy.quest.block.ModBlocks;
 import net.gy.quest.item.ModItems;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -23,6 +24,21 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NETHERITE_CORE);
                         output.accept(ModItems.SPIDER_CORE);
                         output.accept(ModItems.CURSED_BOOK);
+                        output.accept(ModItems.RUNESTONE);
+                        output.accept(ModItems.POLISHED_RUNESTONE);
+                        output.accept(ModBlocks.RUNESTONE_ORE);
+                        output.accept(ModBlocks.RUNESTONE_BLOCK);
+                        output.accept(ModBlocks.POLISHED_RUNESTONE_BLOCK);
+                        output.accept(ModBlocks.ANCIENT_STONE_BRICKS);
+                        output.accept(ModBlocks.STAFFANS_CRAFTER);
+                        output.accept(ModItems.RUNESTONE_SWORD);
+                        output.accept(ModItems.RUNESTONE_PICKAXE);
+                        output.accept(ModItems.RUNESTONE_AXE);
+                        output.accept(ModItems.RUNESTONE_SHOVEL);
+                        output.accept(ModItems.RUNESTONE_HOE);
+                        output.accept(ModItems.RUNESTONE_SPEAR);
+                        output.accept(ModItems.RUNESTONE_UPGRADE_SMITHING_TEMPLATE);
+                        output.accept(ModItems.STORY_BOOK);
                     }).build());
 
 
