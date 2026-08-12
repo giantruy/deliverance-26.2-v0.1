@@ -1,6 +1,5 @@
 package net.gy.quest.datagen;
 
-import com.jcraft.jorbis.Comment;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.gy.quest.block.ModBlocks;
@@ -15,22 +14,22 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
     }
 
     @Override
-    protected  void addTags(HolderLookup.Provider registries) {
-        valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.ANCIENT_STONE_BRICKS)
-                .add(ModBlocks.RUNESTONE_ORE)
-                .add(ModBlocks.RUNESTONE_BLOCK)
-                .add(ModBlocks.POLISHED_RUNESTONE_BLOCK);
+    protected void addTags(HolderLookup.Provider registries) {
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.getRK(ModBlocks.ANCIENT_STONE_BRICKS))
+                .add(ModBlocks.getRK(ModBlocks.RUNESTONE_ORE))
+                .add(ModBlocks.getRK(ModBlocks.RUNESTONE_BLOCK))
+                .add(ModBlocks.getRK(ModBlocks.POLISHED_RUNESTONE_BLOCK));
 
-        valueLookupBuilder(BlockTags.MINEABLE_WITH_AXE)
-                .add(ModBlocks.STAFFANS_CRAFTER);
+        tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.getRK(ModBlocks.STAFFANS_CRAFTER));
 
-        valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.STAFFANS_CRAFTER);
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.getRK(ModBlocks.STAFFANS_CRAFTER));
 
-        valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.RUNESTONE_BLOCK)
-                .add(ModBlocks.POLISHED_RUNESTONE_BLOCK)
-                .add(ModBlocks.RUNESTONE_ORE);
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.getRK(ModBlocks.RUNESTONE_BLOCK))
+                .add(ModBlocks.getRK(ModBlocks.POLISHED_RUNESTONE_BLOCK))
+                .add(ModBlocks.getRK(ModBlocks.RUNESTONE_ORE));
     }
 }

@@ -2,6 +2,7 @@ package net.gy.quest.world;
 
 import net.gy.quest.Deliverance;
 import net.gy.quest.block.ModBlocks;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
@@ -12,8 +13,8 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
-
 import java.util.List;
+
 
 public class ModWorldConfiguredFeatures {
 

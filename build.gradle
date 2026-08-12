@@ -23,7 +23,7 @@ fabricApi {
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	
+
 	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
@@ -41,7 +41,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-	it.options.release = 25
+	it.options.release = 24
 }
 
 java {
@@ -79,3 +79,12 @@ publishing {
 		// retrieving dependencies.
 	}
 }
+
+//loom {
+//	runs {
+//		client {
+//			systemProperties "fabric.client.username", "cinnamonroll8651"
+//			systemProperties "fabric.client.uuid" "8eee9678-bbfb-42e8-bbdb-af28a1604f45"
+//		}
+//	}
+//}

@@ -8,6 +8,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -17,14 +18,11 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 public class ModEffects {
 
     public static final Identifier ELECTROCUTED_SLOW_ID = Identifier.fromNamespaceAndPath("quest", "effect.electrocuted");
-
     public static final Holder<MobEffect> ELECTROCUTED = registerEffect("electrocuted", new MobEffect(MobEffectCategory.HARMFUL, 0x3B9DFF) {
-
         @Override
         public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-            return true;
+            return true ;
         }
-
         public boolean applyEffectTick(ServerLevel level, LivingEntity entity, int amplifier) {
             float damage = 0.5F + amplifier;
             if (entity.isUnderWater()) {
@@ -32,10 +30,9 @@ public class ModEffects {
             } else if (entity.isInWaterOrRain()) {
                 damage *= 1.5;
             }
-            entity.hurt(entity.damageSources().magic(), damage);
+            entity.hurt(entity.damageSources().onFire(), damage);
             return super.applyEffectTick(level, entity, amplifier);
         }
-
     }
                     .addAttributeModifier(
                         Attributes.MOVEMENT_SPEED,
@@ -57,6 +54,22 @@ public class ModEffects {
                     )
 
     );
+
+    public static final Holder<MobEffect> BLOODLETTING = registerEffect("bloodletting", new MobEffect(MobEffectCategory.HARMFUL, 0x470600) {
+        @Override
+        public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
+            return true;
+        }
+        public boolean applyEffectTick(ServerLevel level, LivingEntity entity, int amplifier) {
+            DamageSource damageSource = new DamageSource(level.registryAccess()
+                    .lookupOrThrow(Registries.DAMAGE_TYPE)
+                    .get(ModDamageTypes.BLOOD.identifier())
+                    .orElseThrow()
+            );
+            entity.hurtServer(level, damageSource, 0.75f + amplifier);
+            return super.applyEffectTick(level, entity, amplifier);
+        }
+    });
 
     private static Holder<MobEffect> registerEffect(String name, MobEffect effect) {
         ResourceKey<MobEffect> key = ResourceKey.create(

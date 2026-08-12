@@ -16,6 +16,14 @@
   "item.quest.runestone_hoe": "Runestone Hoe",
   "item.quest.runestone_upgrade_smithing_template": "Runestone Upgrade Smithing Template",
   "item.quest.story_book": "Story Book",
+  "item.quest.unbreakable_pickaxe": "Unbreakable Pickaxe",
+  "item.quest.kings_apple_core": "King's Apple Core",
+  "item.quest.kings_apple": "King's Apple",
+  "item.quest.holy_sword": "Holy Sword",
+  "item.quest.savage_spawn_egg": "Savage Spawn Egg",
+  "item.quest.ancient_wolf_fang": "Ancient Wolf Fang",
+  "item.quest.wolf_fang_trident": "Wolf Fang Trident",
+  "item.quest.shatterguard_spawn_egg": "Shatterguard Spawn Egg",
   "creativemodetab.quest.deliverance_items": "Deliverance",
   "block.quest.ancient_stone_bricks": "Ancient Stone Bricks",
   "block.quest.staffans_crafter": "Staffan's Crafter",
@@ -23,5 +31,10 @@
   "block.quest.runestone_block": "Runestone Block",
   "block.quest.polished_runestone_block": "Polished Runestone Block",
   "container.quest.staffans_crafter": "Staffan's Crafter",
-  "effect.quest.electrocuted": "Electrocuted"
+  "effect.quest.electrocuted": "Electrocuted",
+  "death.attack.blood": "%1$s bled out",
+  "item.quest.music_disc_downed": "Music Disc",
+  "item.quest.music_disc_downed.desc": "Ketsa - Downed",
+  "item.quest.whistle": "Whistle",
+  "jukebox_song.quest.downed": "Ketsa - Downed"
 }

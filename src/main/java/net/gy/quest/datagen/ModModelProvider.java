@@ -26,12 +26,12 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
-        itemModelGenerators.generateFlatItem(ModItems.COPPER_CORE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.IRON_CORE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.GOLD_CORE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.DIAMOND_CORE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.NETHERITE_CORE, ModelTemplates.FLAT_ITEM);
-        itemModelGenerators.generateFlatItem(ModItems.SPIDER_CORE, ModelTemplates.FLAT_ITEM);
+//        itemModelGenerators.generateFlatItem(ModItems.COPPER_CORE, ModelTemplates.FLAT_ITEM);
+//        itemModelGenerators.generateFlatItem(ModItems.IRON_CORE, ModelTemplates.FLAT_ITEM);
+//        itemModelGenerators.generateFlatItem(ModItems.GOLD_CORE, ModelTemplates.FLAT_ITEM);
+//        itemModelGenerators.generateFlatItem(ModItems.DIAMOND_CORE, ModelTemplates.FLAT_ITEM);
+//        itemModelGenerators.generateFlatItem(ModItems.NETHERITE_CORE, ModelTemplates.FLAT_ITEM);
+//        itemModelGenerators.generateFlatItem(ModItems.SPIDER_CORE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.CURSED_BOOK, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.RUNESTONE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.POLISHED_RUNESTONE, ModelTemplates.FLAT_ITEM);
@@ -43,6 +43,16 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateSpear(ModItems.RUNESTONE_SPEAR);
         itemModelGenerators.generateFlatItem(ModItems.RUNESTONE_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.STORY_BOOK, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.UNBREAKABLE_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.NOTCH_CORE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.NOTCH_APPLE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.HOLY_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.SAVAGE_SPAWN_EGG, ModelTemplates.FLAT_HANDHELD_ITEM);
+         itemModelGenerators.generateFlatItem(ModItems.ANCIENT_WOLF_FANG, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.MUSIC_DISC_DOWNED, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateTrident(ModItems.WOLF_FANG_TRIDENT);
+        itemModelGenerators.generateFlatItem(ModItems.WHISTLE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.SHATTERGUARD_SPAWN_EGG, ModelTemplates.FLAT_ITEM);
 
 
     }

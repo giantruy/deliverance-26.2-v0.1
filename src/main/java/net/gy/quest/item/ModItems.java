@@ -2,7 +2,10 @@ package net.gy.quest.item;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.gy.quest.Deliverance;
+import net.gy.quest.datagen.ModJukeboxSongs;
+import net.gy.quest.entity.ModEntityTypes;
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -11,33 +14,82 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.network.Filterable;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.WrittenBookItem;
+import net.minecraft.util.Unit;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.Consumable;
+import net.minecraft.world.item.component.Consumables;
+import net.minecraft.world.item.component.ItemLore;
 import net.minecraft.world.item.component.WrittenBookContent;
+import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.enchantment.ItemEnchantments;
 
-import javax.xml.crypto.Data;
 import java.util.List;
 import java.util.function.Function;
 
 public class ModItems{
 
+    public static final Consumable NOTCH_APPLE_CONSUMABLE = Consumables.defaultFood()
+            .onConsume(new ApplyStatusEffectsConsumeEffect(
+                    List.of(
+                            new MobEffectInstance(MobEffects.ABSORPTION, 60 * 20, 4, false, false, false),
+                            new MobEffectInstance(MobEffects.REGENERATION, 15 * 20, 2, false, false, false),
+                            new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 240 * 20, 0, false, false, false),
+                            new MobEffectInstance(MobEffects.RESISTANCE, 240 * 20, 2, false, false, false),
+//                            new MobEffectInstance(MobEffects.STRENGTH, 15 * 20, 2, false, false, false),
+//                            new MobEffectInstance(MobEffects.SPEED, 120 * 20, 1, false, false, false),
+//                            new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 60 * 20, 1, false, false, false),
+//                            new MobEffectInstance(MobEffects.HASTE, 120 * 20, 2, false, false, false),
+                            new MobEffectInstance(MobEffects.NIGHT_VISION, 120 * 20, 0, false, false, false),
+                            new MobEffectInstance(MobEffects.INVISIBILITY, 30 * 20, 0, false, false, false)
+                    )
+            )).build();
 
-    public static final Item COPPER_CORE = registerItem("copper_core",
-            properties -> new Item(properties.rarity(Rarity.UNCOMMON)));
-    public static final Item IRON_CORE = registerItem("iron_core",
-            properties -> new Item(properties.rarity(Rarity.UNCOMMON)));
-    public static final Item GOLD_CORE = registerItem("gold_core",
-            properties -> new Item(properties.rarity(Rarity.UNCOMMON)));
-    public static final Item DIAMOND_CORE = registerItem("diamond_core",
-            properties -> new Item(properties.rarity(Rarity.UNCOMMON)));
-    public static final Item NETHERITE_CORE = registerItem("netherite_core",
-            properties -> new Item(properties.rarity(Rarity.RARE)));
-    public static final Item SPIDER_CORE = registerItem("spider_core",
-            properties -> new Item(properties.rarity(Rarity.UNCOMMON)));
+
+
+    public static final Item NOTCH_CORE = registerItem("kings_apple_core",
+            properties -> new Item(properties.rarity(Rarity.EPIC).stacksTo(1)
+                    .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+
+    public static final Item NOTCH_APPLE = registerItem("kings_apple",
+            properties -> new NotchAppleItem(properties.rarity(Rarity.EPIC).fireResistant().food(
+                    new FoodProperties.Builder()
+                            .nutrition(6)
+                            .saturationModifier(6)
+                            .alwaysEdible()
+                            .build())
+                    .stacksTo(1)
+                    .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
+                    .component(DataComponents.CONSUMABLE, NOTCH_APPLE_CONSUMABLE)
+                    .component(DataComponents.LORE, new ItemLore(List.of(
+                            Component.literal("The food of kings")))),
+                    ModItems.NOTCH_CORE
+            ));
+
+    public static final Item ANCIENT_WOLF_FANG = registerItem("ancient_wolf_fang",
+            properties -> new Item(properties.rarity(Rarity.RARE).stacksTo(4)
+                    .component(DataComponents.LORE, new ItemLore(List.of(
+                            Component.literal("A fang of an ancient wolf species"))))));
+
+//    public static final Item COPPER_CORE = registerItem("copper_core",
+//            properties -> new Item(properties.rarity(Rarity.UNCOMMON)));
+//    public static final Item IRON_CORE = registerItem("iron_core",
+//            properties -> new Item(properties.rarity(Rarity.UNCOMMON)));
+//    public static final Item GOLD_CORE = registerItem("gold_core",
+//            properties -> new Item(properties.rarity(Rarity.UNCOMMON)));
+//    public static final Item DIAMOND_CORE = registerItem("diamond_core",
+//            properties -> new Item(properties.rarity(Rarity.UNCOMMON)));
+//    public static final Item NETHERITE_CORE = registerItem("netherite_core",
+//            properties -> new Item(properties.rarity(Rarity.RARE)));
+//    public static final Item SPIDER_CORE = registerItem("spider_core",
+//            properties -> new Item(properties.rarity(Rarity.UNCOMMON)));
     public static final Item CURSED_BOOK = registerItem("cursed_book",
-            properties -> new Item(properties.rarity(Rarity.RARE)));
+            properties -> new Item(properties.rarity(Rarity.RARE)
+                    .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
     public static final Item RUNESTONE = registerItem("runestone",
             properties -> new Item(properties.rarity(Rarity.UNCOMMON)));
     public static final Item POLISHED_RUNESTONE = registerItem("polished_runestone",
@@ -106,7 +158,7 @@ public class ModItems{
                             .append(Component.literal("Harald Bane").withStyle(ChatFormatting.OBFUSCATED).withStyle(ChatFormatting.BLUE))
                             .append(Component.literal(" himself they cast out beyond the edge of all things, into exile, stripped of strength to return."))),
 
-                    Filterable.passThrough(Component.literal("")
+                    Filterable.passThrough(Component.literal("Heartbroken, ")
                             .append(Component.literal("Staffan").withStyle(ChatFormatting.OBFUSCATED).withStyle(ChatFormatting.AQUA)).append(Component.literal(", "))
                             .append(Component.literal("Sandra").withStyle(ChatFormatting.OBFUSCATED).withStyle(ChatFormatting.GREEN)).append(Component.literal(", and "))
                             .append(Component.literal("Mark Canute").withStyle(ChatFormatting.OBFUSCATED).withStyle(ChatFormatting.RED)).append(Component.literal(" never spoke of his name again. Some say they feared it would call him back. Others say they could not bear to."))),
@@ -121,8 +173,66 @@ public class ModItems{
     public static final Item STORY_BOOK = registerItem("story_book", properties -> new WrittenBookItem(properties
             .stacksTo(1)
             .component(DataComponents.WRITTEN_BOOK_CONTENT, STORY_CONTENT)
-            .rarity(Rarity.EPIC)
+            .rarity(Rarity.UNCOMMON)
             .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
+
+public static final Item UNBREAKABLE_PICKAXE = registerItem("unbreakable_pickaxe",
+            properties -> new UnbreakablePickaxe(properties.pickaxe(ToolMaterial.NETHERITE,
+                            3.5f, -2.5f)
+                    .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
+                    .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
+                    .rarity(Rarity.EPIC)
+                    .useCooldown(1)
+                    .component(DataComponents.LORE, new ItemLore(List.of(
+                            Component.literal("The electrifying pickaxe of ")
+                                    .append(Component.literal("Harald Bane").withStyle(ChatFormatting.OBFUSCATED, ChatFormatting.DARK_AQUA))
+                    )))
+    ));
+
+public static final Item HOLY_SWORD = registerItem("holy_sword",
+            properties -> new HolySword(properties.sword(ToolMaterial.NETHERITE,
+                            4.5f, -2.4f)
+                    .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
+                    .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
+                    .delayedComponent(DataComponents.ENCHANTMENTS, context -> {
+                        Holder<Enchantment> smite = context.getOrThrow(Enchantments.SMITE);
+                        ItemEnchantments.Mutable mutable = new ItemEnchantments.Mutable(ItemEnchantments.EMPTY);
+                        mutable.set(smite, 7);
+                        return mutable.toImmutable();
+                    })
+                    .rarity(Rarity.EPIC)
+                    .useCooldown(2)
+                    .component(DataComponents.LORE, new ItemLore(List.of(
+                            Component.literal("The wicked shall burn by the sword of ")
+                                    .append(Component.literal("Mark Canute").withStyle(ChatFormatting.OBFUSCATED, ChatFormatting.RED))
+                    )))
+    ));
+
+    public static final Item WOLF_FANG_TRIDENT = registerItem("wolf_fang_trident",
+            properties -> new WolfTrident(properties
+                    .delayedComponent(DataComponents.ENCHANTMENTS, context -> {
+                        Holder<Enchantment> loyalty = context.getOrThrow(Enchantments.LOYALTY);
+                        ItemEnchantments.Mutable mutable = new ItemEnchantments.Mutable(ItemEnchantments.EMPTY);
+                        mutable.set(loyalty, 5);
+                        return mutable.toImmutable();
+                    })
+                    .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
+                    .rarity(Rarity.EPIC)
+                    .component(DataComponents.LORE, new ItemLore(List.of(
+                            Component.literal("The loyal wolf trident of ")
+                                    .append(Component.literal("Sandra").withStyle(ChatFormatting.OBFUSCATED, ChatFormatting.GREEN))
+                    )))
+    ));
+
+    public static final Item MUSIC_DISC_DOWNED = registerItem("music_disc_downed", properties -> new Item(properties.rarity(Rarity.UNCOMMON).stacksTo(1).jukeboxPlayable(ModJukeboxSongs.DOWNED_KEY)));
+
+    public static final Item WHISTLE = registerItem("whistle", properties -> new WhistleItem(properties.rarity(Rarity.UNCOMMON).stacksTo(1).useCooldown(20)));
+
+
+    public static final Item SAVAGE_SPAWN_EGG = registerItem("savage_spawn_egg", properties -> new SpawnEggItem(properties.spawnEgg(ModEntityTypes.SAVAGE)));
+
+    public static final Item SHATTERGUARD_SPAWN_EGG = registerItem("shatterguard_spawn_egg", properties -> new SpawnEggItem(properties.spawnEgg(ModEntityTypes.SHATTERGUARD)));
+
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
@@ -138,21 +248,25 @@ public class ModItems{
         Deliverance.LOGGER.info("Registering Mod Items for " + Deliverance.MOD_ID);
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output-> {
-            output.accept(COPPER_CORE);
-            output.accept(IRON_CORE);
-            output.accept(GOLD_CORE);
-            output.accept(DIAMOND_CORE);
-            output.accept(NETHERITE_CORE);
-            output.accept(SPIDER_CORE);
+//            output.accept(COPPER_CORE);
+//            output.accept(IRON_CORE);
+//            output.accept(GOLD_CORE);
+//            output.accept(DIAMOND_CORE);
+//            output.accept(NETHERITE_CORE);
+//            output.accept(SPIDER_CORE);
             output.accept(CURSED_BOOK);
             output.accept(RUNESTONE);
             output.accept(POLISHED_RUNESTONE);
             output.accept(RUNESTONE_UPGRADE_SMITHING_TEMPLATE);
+            output.accept(ANCIENT_WOLF_FANG);
         });
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register(output-> {
             output.accept(RUNESTONE_SWORD);
             output.accept(RUNESTONE_SPEAR);
+            output.accept(UNBREAKABLE_PICKAXE);
+            output.accept(HOLY_SWORD);
+            output.accept(WOLF_FANG_TRIDENT);
         });
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(output-> {
@@ -161,6 +275,22 @@ public class ModItems{
             output.accept(RUNESTONE_SHOVEL);
             output.accept(RUNESTONE_HOE);
             output.accept(STORY_BOOK);
+            output.accept(UNBREAKABLE_PICKAXE);
+            output.accept(WHISTLE);
+        });
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS).register(output-> {
+            output.accept(NOTCH_CORE);
+            output.accept(NOTCH_APPLE);
+        });
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.SPAWN_EGGS).register(output-> {
+            output.accept(SAVAGE_SPAWN_EGG);
+            output.accept(SHATTERGUARD_SPAWN_EGG);
+        });
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(output-> {
+            output.accept(MUSIC_DISC_DOWNED);
         });
 
     }

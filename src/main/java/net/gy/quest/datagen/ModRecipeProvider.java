@@ -18,6 +18,8 @@ import net.minecraft.world.level.ItemLike;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import static net.gy.quest.datagen.StaffansCraftingRecipeBuilder.staffansCrafting;
+
 public class ModRecipeProvider extends FabricRecipeProvider {
     public ModRecipeProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
@@ -37,68 +39,84 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.RUNESTONE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RUNESTONE_BLOCK);
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.POLISHED_RUNESTONE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_RUNESTONE_BLOCK);
 
-                shaped(RecipeCategory.MISC, ModItems.COPPER_CORE)
-                        .pattern("CCC")
-                        .pattern("CRC")
-                        .pattern("CCC")
-                        .define('C', Items.COPPER_INGOT)
+//                shaped(RecipeCategory.MISC, ModItems.COPPER_CORE)
+//                        .pattern("CCC")
+//                        .pattern("CRC")
+//                        .pattern("CCC")
+//                        .define('C', Items.COPPER_INGOT)
+//                        .define('R', ModItems.POLISHED_RUNESTONE)
+//                        .unlockedBy(getHasName(ModItems.POLISHED_RUNESTONE), has(ModItems.POLISHED_RUNESTONE))
+//                        .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+//                        .group("runestone")
+//                        .save(output);
+//                shaped(RecipeCategory.MISC, ModItems.IRON_CORE)
+//                        .pattern("CCC")
+//                        .pattern("CRC")
+//                        .pattern("CCC")
+//                        .define('C', Items.IRON_INGOT)
+//                        .define('R', ModItems.POLISHED_RUNESTONE)
+//                        .unlockedBy(getHasName(ModItems.POLISHED_RUNESTONE), has(ModItems.POLISHED_RUNESTONE))
+//                        .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+//                        .group("runestone")
+//                        .save(output);
+//                shaped(RecipeCategory.MISC, ModItems.GOLD_CORE)
+//                        .pattern("CCC")
+//                        .pattern("CRC")
+//                        .pattern("CCC")
+//                        .define('C', Items.GOLD_INGOT)
+//                        .define('R', ModItems.POLISHED_RUNESTONE)
+//                        .unlockedBy(getHasName(ModItems.POLISHED_RUNESTONE), has(ModItems.POLISHED_RUNESTONE))
+//                        .unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
+//                        .group("runestone")
+//                        .save(output);
+//                shaped(RecipeCategory.MISC, ModItems.DIAMOND_CORE)
+//                        .pattern("CCC")
+//                        .pattern("CRC")
+//                        .pattern("CCC")
+//                        .define('C', Items.DIAMOND)
+//                        .define('R', ModItems.POLISHED_RUNESTONE)
+//                        .unlockedBy(getHasName(ModItems.POLISHED_RUNESTONE), has(ModItems.POLISHED_RUNESTONE))
+//                        .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
+//                        .group("runestone")
+//                        .save(output);
+//                shaped(RecipeCategory.MISC, ModItems.NETHERITE_CORE)
+//                        .pattern("CCC")
+//                        .pattern("CRC")
+//                        .pattern("CCC")
+//                        .define('C', Items.NETHERITE_INGOT)
+//                        .define('R', ModItems.POLISHED_RUNESTONE)
+//                        .unlockedBy(getHasName(ModItems.POLISHED_RUNESTONE), has(ModItems.POLISHED_RUNESTONE))
+//                        .unlockedBy(getHasName(Items.NETHERITE_INGOT), has(Items.NETHERITE_INGOT))
+//                        .group("runestone")
+//                        .save(output);
+//                shaped(RecipeCategory.MISC, ModItems.SPIDER_CORE)
+//                        .pattern("CCC")
+//                        .pattern("CRC")
+//                        .pattern("CCC")
+//                        .define('C', Items.STRING)
+//                        .define('R', ModItems.POLISHED_RUNESTONE)
+//                        .unlockedBy(getHasName(ModItems.POLISHED_RUNESTONE), has(ModItems.POLISHED_RUNESTONE))
+//                        .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+//                        .group("runestone")
+//                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModBlocks.STAFFANS_CRAFTER)
+                        .pattern(" L ")
+                        .pattern("RIR")
+                        .pattern("ICI")
+                        .define('L', Items.LAPIS_LAZULI)
                         .define('R', ModItems.POLISHED_RUNESTONE)
-                        .unlockedBy(getHasName(ModItems.POLISHED_RUNESTONE), has(ModItems.POLISHED_RUNESTONE))
-                        .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
-                        .group("runestone")
-                        .save(output);
-                shaped(RecipeCategory.MISC, ModItems.IRON_CORE)
-                        .pattern("CCC")
-                        .pattern("CRC")
-                        .pattern("CCC")
-                        .define('C', Items.IRON_INGOT)
-                        .define('R', ModItems.POLISHED_RUNESTONE)
+                        .define('I', Items.IRON_INGOT)
+                        .define('C', Items.CRAFTER)
                         .unlockedBy(getHasName(ModItems.POLISHED_RUNESTONE), has(ModItems.POLISHED_RUNESTONE))
                         .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
-                        .group("runestone")
-                        .save(output);
-                shaped(RecipeCategory.MISC, ModItems.GOLD_CORE)
-                        .pattern("CCC")
-                        .pattern("CRC")
-                        .pattern("CCC")
-                        .define('C', Items.GOLD_INGOT)
-                        .define('R', ModItems.POLISHED_RUNESTONE)
-                        .unlockedBy(getHasName(ModItems.POLISHED_RUNESTONE), has(ModItems.POLISHED_RUNESTONE))
-                        .unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
-                        .group("runestone")
-                        .save(output);
-                shaped(RecipeCategory.MISC, ModItems.DIAMOND_CORE)
-                        .pattern("CCC")
-                        .pattern("CRC")
-                        .pattern("CCC")
-                        .define('C', Items.DIAMOND)
-                        .define('R', ModItems.POLISHED_RUNESTONE)
-                        .unlockedBy(getHasName(ModItems.POLISHED_RUNESTONE), has(ModItems.POLISHED_RUNESTONE))
-                        .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
-                        .group("runestone")
-                        .save(output);
-                shaped(RecipeCategory.MISC, ModItems.NETHERITE_CORE)
-                        .pattern("CCC")
-                        .pattern("CRC")
-                        .pattern("CCC")
-                        .define('C', Items.NETHERITE_INGOT)
-                        .define('R', ModItems.POLISHED_RUNESTONE)
-                        .unlockedBy(getHasName(ModItems.POLISHED_RUNESTONE), has(ModItems.POLISHED_RUNESTONE))
-                        .unlockedBy(getHasName(Items.NETHERITE_INGOT), has(Items.NETHERITE_INGOT))
-                        .group("runestone")
-                        .save(output);
-                shaped(RecipeCategory.MISC, ModItems.SPIDER_CORE)
-                        .pattern("CCC")
-                        .pattern("CRC")
-                        .pattern("CCC")
-                        .define('C', Items.STRING)
-                        .define('R', ModItems.POLISHED_RUNESTONE)
-                        .unlockedBy(getHasName(ModItems.POLISHED_RUNESTONE), has(ModItems.POLISHED_RUNESTONE))
-                        .unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+                        .unlockedBy(getHasName(Items.CRAFTER), has(Items.CRAFTER))
+                        .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
                         .group("runestone")
                         .save(output);
 
-                shaped(RecipeCategory.MISC, ModItems.RUNESTONE_UPGRADE_SMITHING_TEMPLATE)
+
+                staffansCrafting(ModItems.RUNESTONE_UPGRADE_SMITHING_TEMPLATE)
                         .pattern("CCC")
                         .pattern("CRC")
                         .pattern("CCC")
@@ -107,20 +125,30 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.POLISHED_RUNESTONE), has(ModItems.POLISHED_RUNESTONE))
                         .unlockedBy(getHasName(Items.NETHERITE_INGOT), has(Items.NETHERITE_INGOT))
                         .group("runestone")
-                        .save(output);
+                        .save(output, "runestone_upgrade_smithing_template_staffans");
 
-                shaped(RecipeCategory.MISC, ModBlocks.STAFFANS_CRAFTER)
-                        .pattern(" C ")
-                        .pattern("ROR")
-                        .pattern("OOO")
-                        .define('C', ModItems.CURSED_BOOK)
+                staffansCrafting(ModItems.NOTCH_APPLE)
+                        .pattern("CCC")
+                        .pattern("CRC")
+                        .pattern("CCC")
+                        .define('C', Items.GOLD_BLOCK)
+                        .define('R', ModItems.NOTCH_CORE)
+                        .unlockedBy(getHasName(ModItems.NOTCH_CORE), has(ModItems.NOTCH_CORE))
+                        .unlockedBy(getHasName(Items.GOLD_BLOCK), has(Items.GOLD_BLOCK))
+                        .group("apple")
+                        .save(output, "notch_apple_staffans");
+
+                staffansCrafting(ModItems.WOLF_FANG_TRIDENT)
+                        .pattern("RFF")
+                        .pattern("RTF")
+                        .pattern("RRR")
+                        .define('F', ModItems.ANCIENT_WOLF_FANG)
                         .define('R', ModItems.POLISHED_RUNESTONE)
-                        .define('O', Items.OBSIDIAN)
+                        .define('T', Items.TRIDENT)
+                        .unlockedBy(getHasName(ModItems.ANCIENT_WOLF_FANG), has(ModItems.ANCIENT_WOLF_FANG))
                         .unlockedBy(getHasName(ModItems.POLISHED_RUNESTONE), has(ModItems.POLISHED_RUNESTONE))
-                        .unlockedBy(getHasName(ModItems.CURSED_BOOK), has(ModItems.CURSED_BOOK))
-                        .unlockedBy(getHasName(Items.OBSIDIAN), has(Items.OBSIDIAN))
                         .group("runestone")
-                        .save(output);
+                        .save(output, "wolf_fang_trident_staffans");
 
                 stonecutterResultFromBase(RecipeCategory.MISC, ModItems.POLISHED_RUNESTONE, ModItems.RUNESTONE);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_RUNESTONE_BLOCK, ModBlocks.RUNESTONE_BLOCK);
@@ -131,6 +159,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 smithUpgrade(Items.DIAMOND_SHOVEL, ModItems.RUNESTONE_SHOVEL, "runestone_shovel_smithing");
                 smithUpgrade(Items.DIAMOND_HOE, ModItems.RUNESTONE_HOE, "runestone_hoe_smithing");
                 smithUpgrade(Items.DIAMOND_SPEAR, ModItems.RUNESTONE_SPEAR, "runestone_spear_smithing");
+
+                shaped(RecipeCategory.TOOLS, ModItems.WHISTLE)
+                        .pattern("NN")
+                        .define('N', Items.IRON_NUGGET)
+                        .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
+                        .group("whistle")
+                        .save(output);
 
 
             }
@@ -147,6 +182,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlocks(getHasName(Items.ECHO_SHARD), has(Items.ECHO_SHARD))
                         .save(output, name);
             }
+
         };
     }
 

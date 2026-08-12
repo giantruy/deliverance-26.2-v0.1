@@ -61,6 +61,11 @@ public class ModBlocks {
                         .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Deliverance.MOD_ID, name)))));
     }
 
+    public static ResourceKey<Block> getRK(Block block) {
+        return BuiltInRegistries.BLOCK.getResourceKey(block).get();
+    }
+
+
     public static void registerModBlocks() {
         Deliverance.LOGGER.info("Registering Mod Blocks for " + Deliverance.MOD_ID);
 
