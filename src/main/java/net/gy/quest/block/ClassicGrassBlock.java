@@ -15,7 +15,8 @@ public class ClassicGrassBlock extends GrassBlock {
 
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        if (level.getMaxLocalRawBrightness(pos.above()) < 9) {
+        BlockState above = level.getBlockState(pos.above());
+        if (!above.isAir()) {
             level.setBlock(pos, ModBlocks.CLASSIC_DIRT.defaultBlockState(), 3);
             return;
         }
@@ -29,7 +30,7 @@ public class ClassicGrassBlock extends GrassBlock {
 
             BlockState targetState = level.getBlockState(target);
             if ((targetState.is(ModBlocks.CLASSIC_DIRT) || targetState.is(Blocks.DIRT))
-                    && level.getMaxLocalRawBrightness(target.above()) >= 9) {
+                    && level.getBlockState(target.above()).isAir()) {
                 level.setBlock(target, ModBlocks.CLASSIC_GRASS.defaultBlockState(), 3);
             }
         }
