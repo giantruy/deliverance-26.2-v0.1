@@ -1,0 +1,17 @@
+{
+  "type": "quest:staffans_crafting",
+  "ingredients": [
+    "minecraft:gold_block",
+    "minecraft:gold_block",
+    "minecraft:gold_block",
+    "minecraft:gold_block",
+    "quest:kings_apple_core",
+    "minecraft:gold_block",
+    "minecraft:gold_block",
+    "minecraft:gold_block",
+    "minecraft:gold_block"
+  ],
+  "result": {
+    "id": "quest:kings_apple"
+  }
+}

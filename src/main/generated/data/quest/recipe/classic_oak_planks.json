@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "classic",
+  "ingredients": [
+    "quest:classic_oak_log"
+  ],
+  "result": {
+    "count": 4,
+    "id": "quest:classic_oak_planks"
+  }
+}

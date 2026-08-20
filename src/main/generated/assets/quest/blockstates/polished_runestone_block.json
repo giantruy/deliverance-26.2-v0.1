@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "quest:block/polished_runestone_block"
+    }
+  }
+}

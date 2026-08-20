@@ -1,0 +1,9 @@
+{
+  "feature": "quest:classic_tree_leafless",
+  "placement": [
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "MOTION_BLOCKING"
+    }
+  ]
+}

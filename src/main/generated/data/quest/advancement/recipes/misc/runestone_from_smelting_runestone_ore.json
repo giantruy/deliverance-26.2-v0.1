@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_runestone_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "quest:runestone_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "quest:runestone_from_smelting_runestone_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_runestone_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "quest:runestone_from_smelting_runestone_ore"
+    ]
+  }
+}

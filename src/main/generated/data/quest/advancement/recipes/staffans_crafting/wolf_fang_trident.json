@@ -1,0 +1,42 @@
+{
+  "criteria": {
+    "has_ancient_wolf_fang": {
+      "conditions": {
+        "items": [
+          {
+            "items": "quest:ancient_wolf_fang"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_polished_runestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "quest:polished_runestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "quest:wolf_fang_trident"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_ancient_wolf_fang",
+      "has_polished_runestone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "quest:wolf_fang_trident"
+    ]
+  }
+}

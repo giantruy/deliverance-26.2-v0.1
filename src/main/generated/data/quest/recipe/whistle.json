@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "whistle",
+  "key": {
+    "N": "minecraft:iron_nugget"
+  },
+  "pattern": [
+    "NN"
+  ],
+  "result": {
+    "id": "quest:whistle"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "quest:runestone_block",
+  "result": {
+    "id": "quest:polished_runestone_block"
+  }
+}

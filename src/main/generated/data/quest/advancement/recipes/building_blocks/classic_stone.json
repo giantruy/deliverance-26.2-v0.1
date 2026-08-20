@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_classic_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "quest:classic_cobblestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "quest:classic_stone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_classic_cobblestone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "quest:classic_stone"
+    ]
+  }
+}

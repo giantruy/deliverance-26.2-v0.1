@@ -1,0 +1,42 @@
+{
+  "criteria": {
+    "has_gold_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:gold_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_kings_apple_core": {
+      "conditions": {
+        "items": [
+          {
+            "items": "quest:kings_apple_core"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "quest:kings_apple"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_kings_apple_core",
+      "has_gold_block",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "quest:kings_apple"
+    ]
+  }
+}

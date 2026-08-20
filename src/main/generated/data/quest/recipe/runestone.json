@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "quest:runestone_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "quest:runestone"
+  }
+}

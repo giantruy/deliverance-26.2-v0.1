@@ -1,0 +1,11 @@
+{
+  "values": [
+    "quest:ancient_stone_bricks",
+    "quest:runestone_ore",
+    "quest:runestone_block",
+    "quest:polished_runestone_block",
+    "quest:classic_stone",
+    "quest:classic_cobblestone",
+    "quest:classic_bricks"
+  ]
+}

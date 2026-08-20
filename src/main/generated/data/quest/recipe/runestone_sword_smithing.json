@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:echo_shard",
+  "base": "minecraft:diamond_sword",
+  "result": {
+    "id": "quest:runestone_sword"
+  },
+  "template": "quest:runestone_upgrade_smithing_template"
+}

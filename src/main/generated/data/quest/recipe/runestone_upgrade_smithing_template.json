@@ -1,0 +1,17 @@
+{
+  "type": "quest:staffans_crafting",
+  "ingredients": [
+    "quest:polished_runestone",
+    "quest:polished_runestone",
+    "quest:polished_runestone",
+    "quest:polished_runestone",
+    "minecraft:netherite_ingot",
+    "quest:polished_runestone",
+    "quest:polished_runestone",
+    "quest:polished_runestone",
+    "quest:polished_runestone"
+  ],
+  "result": {
+    "id": "quest:runestone_upgrade_smithing_template"
+  }
+}

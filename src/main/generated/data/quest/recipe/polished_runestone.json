@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "quest:polished_runestone_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "quest:polished_runestone"
+  }
+}

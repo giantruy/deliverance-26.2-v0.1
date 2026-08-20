@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "quest:block/classic_oak_leaves"
+  }
+}

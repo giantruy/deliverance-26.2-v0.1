@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:echo_shard",
+  "base": "minecraft:diamond_shovel",
+  "result": {
+    "id": "quest:runestone_shovel"
+  },
+  "template": "quest:runestone_upgrade_smithing_template"
+}

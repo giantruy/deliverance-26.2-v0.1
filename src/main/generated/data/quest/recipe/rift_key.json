@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "quest:unbreakable_pickaxe",
+    "quest:blood_dropper",
+    "quest:cursed_lectern"
+  ],
+  "result": {
+    "id": "quest:rift_key"
+  }
+}

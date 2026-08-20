@@ -1,0 +1,17 @@
+{
+  "type": "quest:staffans_crafting",
+  "ingredients": [
+    "minecraft:piston",
+    "minecraft:redstone_block",
+    "minecraft:piston",
+    "minecraft:leather",
+    "minecraft:nether_brick_fence",
+    "minecraft:leather",
+    "minecraft:leather",
+    "minecraft:nether_brick_fence",
+    "minecraft:leather"
+  ],
+  "result": {
+    "id": "quest:redstone_hammer"
+  }
+}

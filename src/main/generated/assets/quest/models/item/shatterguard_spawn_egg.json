@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "quest:item/shatterguard_spawn_egg"
+  }
+}

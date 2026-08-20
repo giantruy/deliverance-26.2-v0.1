@@ -1,0 +1,8 @@
+{
+  "comparator_output": 13,
+  "description": {
+    "translate": "jukebox_song.quest.downed"
+  },
+  "length_in_seconds": 153.0,
+  "sound_event": "quest:downed"
+}

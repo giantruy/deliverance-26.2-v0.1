@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "quest:block/classic_grass_bottom",
+    "side": "quest:block/classic_grass_side",
+    "top": "quest:block/classic_grass_top"
+  }
+}

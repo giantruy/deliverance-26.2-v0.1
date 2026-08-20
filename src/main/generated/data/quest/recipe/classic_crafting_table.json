@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "classic",
+  "key": {
+    "O": "quest:classic_oak_planks"
+  },
+  "pattern": [
+    "OO",
+    "OO"
+  ],
+  "result": {
+    "id": "quest:classic_crafting_table"
+  }
+}

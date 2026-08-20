@@ -1,0 +1,1256 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "quest:cursed_book"
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.2,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:diamond"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.5,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:book"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.3,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 4.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:iron_ingot"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.5,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 5.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:bone"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.75,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 2.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:cobweb"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.4,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 5.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:rotten_flesh"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.75,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 5.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:paper"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.1,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:enchanted_golden_apple"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.3,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:enchant_with_levels",
+              "levels": {
+                "type": "minecraft:uniform",
+                "max": 33.0,
+                "min": 25.0
+              },
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            }
+          ],
+          "name": "minecraft:book"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.15,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            }
+          ],
+          "name": "minecraft:diamond_axe"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.15,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            }
+          ],
+          "name": "minecraft:diamond_pickaxe"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.15,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            }
+          ],
+          "name": "minecraft:diamond_shovel"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.15,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            }
+          ],
+          "name": "minecraft:diamond_hoe"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "chance": 0.15,
+              "condition": "minecraft:random_chance"
+            }
+          ],
+          "functions": [
+            {
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            },
+            {
+              "function": "minecraft:enchant_randomly",
+              "options": [
+                "minecraft:protection",
+                "minecraft:piercing",
+                "minecraft:sharpness",
+                "minecraft:infinity",
+                "minecraft:density",
+                "minecraft:soul_speed",
+                "minecraft:looting",
+                "minecraft:luck_of_the_sea",
+                "minecraft:multishot",
+                "minecraft:wind_burst",
+                "minecraft:mending",
+                "minecraft:loyalty",
+                "minecraft:unbreaking",
+                "minecraft:thorns",
+                "minecraft:silk_touch",
+                "minecraft:fire_aspect",
+                "minecraft:breach",
+                "minecraft:feather_falling",
+                "minecraft:projectile_protection",
+                "minecraft:fortune",
+                "minecraft:efficiency",
+                "minecraft:respiration",
+                "minecraft:lure",
+                "minecraft:riptide",
+                "minecraft:bane_of_arthropods",
+                "minecraft:channeling",
+                "minecraft:punch",
+                "minecraft:flame",
+                "minecraft:impaling",
+                "minecraft:frost_walker",
+                "minecraft:blast_protection",
+                "minecraft:aqua_affinity",
+                "minecraft:fire_protection",
+                "minecraft:power",
+                "minecraft:lunge",
+                "minecraft:knockback",
+                "minecraft:quick_charge",
+                "minecraft:depth_strider",
+                "minecraft:sweeping_edge",
+                "minecraft:swift_sneak",
+                "minecraft:smite"
+              ]
+            }
+          ],
+          "name": "minecraft:diamond_sword"
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 11.0,
+        "min": 5.0
+      }
+    }
+  ]
+}

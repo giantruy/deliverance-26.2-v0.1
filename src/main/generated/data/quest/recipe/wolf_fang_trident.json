@@ -1,0 +1,17 @@
+{
+  "type": "quest:staffans_crafting",
+  "ingredients": [
+    "quest:polished_runestone",
+    "quest:ancient_wolf_fang",
+    "quest:ancient_wolf_fang",
+    "quest:polished_runestone",
+    "minecraft:trident",
+    "quest:ancient_wolf_fang",
+    "quest:polished_runestone",
+    "quest:polished_runestone",
+    "quest:polished_runestone"
+  ],
+  "result": {
+    "id": "quest:wolf_fang_trident"
+  }
+}

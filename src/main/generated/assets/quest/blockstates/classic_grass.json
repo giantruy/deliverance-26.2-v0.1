@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "snowy=false": [
+      {
+        "model": "quest:block/classic_grass"
+      },
+      {
+        "model": "quest:block/classic_grass",
+        "y": 90
+      },
+      {
+        "model": "quest:block/classic_grass",
+        "y": 180
+      },
+      {
+        "model": "quest:block/classic_grass",
+        "y": 270
+      }
+    ],
+    "snowy=true": {
+      "model": "quest:block/classic_grass_snow"
+    }
+  }
+}
