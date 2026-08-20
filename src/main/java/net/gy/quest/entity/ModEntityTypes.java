@@ -25,6 +25,18 @@ public class ModEntityTypes {
                     .sized(0.7f, 1.95f)
     );
 
+    public static final EntityType<SummonedZombieEntity> SUMMONED_ZOMBIE = register(
+            "summoned_zombie",
+            EntityType.Builder.<SummonedZombieEntity>of(SummonedZombieEntity::new, MobCategory.MONSTER)
+                    .sized(0.6f, 1.95f)
+    );
+
+    public static final EntityType<SummonedSkeletonEntity> SUMMONED_SKELETON = register(
+            "summoned_skeleton",
+            EntityType.Builder.<SummonedSkeletonEntity>of(SummonedSkeletonEntity::new, MobCategory.MONSTER)
+                    .sized(0.6f, 1.99f)
+    );
+
     public static final EntityType<WolfTridentEntity> WOLF_TRIDENT = register("wolf_fang_trident", EntityType.Builder.<WolfTridentEntity>of(WolfTridentEntity::new, MobCategory.MISC)
             .sized(0.5f, 0.5f)
             .clientTrackingRange(4)
@@ -45,5 +57,7 @@ public class ModEntityTypes {
     public static void registerAttributes() {
         FabricDefaultAttributeRegistry.register(SAVAGE, SavageEntity.createCubeAttributes());
         FabricDefaultAttributeRegistry.register(SHATTERGUARD, ShatterguardEntity.createCubeAttributes());
+        FabricDefaultAttributeRegistry.register(SUMMONED_ZOMBIE, ShatterguardEntity.createCubeAttributes());
+        FabricDefaultAttributeRegistry.register(SUMMONED_SKELETON, ShatterguardEntity.createCubeAttributes());
     }
 }

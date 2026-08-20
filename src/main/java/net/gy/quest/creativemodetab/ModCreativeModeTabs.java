@@ -11,8 +11,6 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
-import static net.gy.quest.item.ModItems.*;
-
 public class ModCreativeModeTabs {
     public static final CreativeModeTab MOD_ITEM_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
             Identifier.fromNamespaceAndPath(Deliverance.MOD_ID, "deliverance_items"),
@@ -41,16 +39,29 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RUNESTONE_SPEAR);
                         output.accept(ModItems.RUNESTONE_UPGRADE_SMITHING_TEMPLATE);
                         output.accept(ModItems.STORY_BOOK);
-                        output.accept(UNBREAKABLE_PICKAXE);
-                        output.accept(NOTCH_CORE);
-                        output.accept(NOTCH_APPLE);
-                        output.accept(HOLY_SWORD);
-                        output.accept(SAVAGE_SPAWN_EGG);
-                        output.accept(SHATTERGUARD_SPAWN_EGG);
-                        output.accept(ANCIENT_WOLF_FANG);
-                        output.accept(MUSIC_DISC_DOWNED);
-                        output.accept(WOLF_FANG_TRIDENT);
-                        output.accept(WHISTLE);
+                        output.accept(ModItems.UNBREAKABLE_PICKAXE);
+                        output.accept(ModItems.NOTCH_CORE);
+                        output.accept(ModItems.NOTCH_APPLE);
+                        output.accept(ModItems.HOLY_SWORD);
+                        output.accept(ModItems.SAVAGE_SPAWN_EGG);
+                        output.accept(ModItems.SHATTERGUARD_SPAWN_EGG);
+                        output.accept(ModItems.ANCIENT_WOLF_FANG);
+                        output.accept(ModItems.MUSIC_DISC_DOWNED);
+                        output.accept(ModItems.WOLF_FANG_TRIDENT);
+                        output.accept(ModItems.WHISTLE);
+                        output.accept(ModBlocks.CLASSIC_GRASS);
+                        output.accept(ModBlocks.CLASSIC_DIRT);
+                        output.accept(ModBlocks.CLASSIC_STONE);
+                        output.accept(ModBlocks.CLASSIC_COBBLESTONE);
+                        output.accept(ModBlocks.CLASSIC_OAK_LOG);
+                        output.accept(ModBlocks.CLASSIC_OAK_PLANKS);
+                        output.accept(ModBlocks.CLASSIC_CRAFTING_TABLE);
+                        output.accept(ModBlocks.CLASSIC_BRICKS);
+                        output.accept(ModItems.CLASSIC_OAK_SAPLING);
+                        output.accept(ModBlocks.CLASSIC_BEDROCK);
+                        output.accept(ModItems.RIFT_KEY);
+                        output.accept(ModItems.BLOOD_DROPPER);
+                        output.accept(ModBlocks.CURSED_LECTERN);
                     }).build());
 
 

@@ -9,11 +9,13 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SmithingTransformRecipeBuilder;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -150,6 +152,21 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group("runestone")
                         .save(output, "wolf_fang_trident_staffans");
 
+                staffansCrafting(ModItems.REDSTONE_HAMMER)
+                        .pattern("PRP")
+                        .pattern("LFL")
+                        .pattern("LFL")
+                        .define('F', Items.NETHER_BRICK_FENCE)
+                        .define('P', Items.PISTON)
+                        .define('R', Items.REDSTONE_BLOCK)
+                        .define('L', Items.LEATHER)
+                        .unlockedBy(getHasName(Items.NETHER_BRICK_FENCE), has(Items.NETHER_BRICK_FENCE))
+                        .unlockedBy(getHasName(Items.PISTON), has(Items.PISTON))
+                        .unlockedBy(getHasName(Items.REDSTONE_BLOCK), has(Items.REDSTONE_BLOCK))
+                        .unlockedBy(getHasName(Items.LEATHER), has(Items.LEATHER))
+                        .group("weapons")
+                        .save(output, "redstone_hammer_staffans");
+
                 stonecutterResultFromBase(RecipeCategory.MISC, ModItems.POLISHED_RUNESTONE, ModItems.RUNESTONE);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.POLISHED_RUNESTONE_BLOCK, ModBlocks.RUNESTONE_BLOCK);
 
@@ -166,6 +183,33 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
                         .group("whistle")
                         .save(output);
+
+
+                smeltingResultFromBase(ModBlocks.CLASSIC_STONE, ModBlocks.CLASSIC_COBBLESTONE);
+
+                shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CLASSIC_OAK_PLANKS, 4)
+                        .requires(ModBlocks.CLASSIC_OAK_LOG)
+                        .group("planks")
+                        .unlockedBy(getHasName(ModBlocks.CLASSIC_OAK_LOG), has(ModBlocks.CLASSIC_OAK_LOG))
+                        .group("classic")
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, ModBlocks.CLASSIC_CRAFTING_TABLE)
+                        .pattern("OO")
+                        .pattern("OO")
+                        .define('O', ModBlocks.CLASSIC_OAK_PLANKS)
+                        .unlockedBy(getHasName(ModBlocks.CLASSIC_OAK_PLANKS), has(ModBlocks.CLASSIC_OAK_PLANKS))
+                        .group("classic")
+                        .save(output);
+
+                shapeless(RecipeCategory.MISC, ModItems.RIFT_KEY)
+                        .requires(ModItems.UNBREAKABLE_PICKAXE)
+                        .requires(ModItems.BLOOD_DROPPER)
+                        .requires(ModBlocks.CURSED_LECTERN)
+                        .unlockedBy(getHasName(ModItems.UNBREAKABLE_PICKAXE), this.has(ModItems.UNBREAKABLE_PICKAXE))
+                        .unlockedBy(getHasName(ModItems.BLOOD_DROPPER), this.has(ModItems.BLOOD_DROPPER))
+                        .unlockedBy(getHasName(ModBlocks.CURSED_LECTERN), this.has(ModBlocks.CURSED_LECTERN))
+                        .save(this.output);
 
 
             }

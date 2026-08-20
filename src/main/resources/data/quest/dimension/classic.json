@@ -1,0 +1,11 @@
+{
+  "type": "quest:classic",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "quest:classic",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "quest:classic_plains"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "quest:block/cursed_lectern" },
+    "facing=south": { "model": "quest:block/cursed_lectern", "y": 180 },
+    "facing=west":  { "model": "quest:block/cursed_lectern", "y": 270 },
+    "facing=east":  { "model": "quest:block/cursed_lectern", "y": 90 }
+  }
+}

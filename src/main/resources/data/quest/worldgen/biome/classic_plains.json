@@ -1,0 +1,19 @@
+{
+  "temperature": 0.8,
+  "tags": "classic",
+  "downfall": 0.4,
+  "has_precipitation": false,
+  "temperature_modifier": "frozen",
+  "effects": {
+    "water_color": 4935034,
+    "grass_color": "#3d8355",
+    "foliage_color": "#92bc95",
+    "dry_foliage_color": "#6f8476",
+    "grass_color_modifier": "none"
+  },
+  "creature_spawn_probability": 0,
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": [],
+  "features": []
+}

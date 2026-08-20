@@ -2,6 +2,7 @@ package net.gy.quest.item;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.gy.quest.Deliverance;
+import net.gy.quest.block.ModBlocks;
 import net.gy.quest.datagen.ModJukeboxSongs;
 import net.gy.quest.entity.ModEntityTypes;
 import net.minecraft.ChatFormatting;
@@ -162,7 +163,7 @@ public class ModItems{
                             .append(Component.literal("Staffan").withStyle(ChatFormatting.OBFUSCATED).withStyle(ChatFormatting.AQUA)).append(Component.literal(", "))
                             .append(Component.literal("Sandra").withStyle(ChatFormatting.OBFUSCATED).withStyle(ChatFormatting.GREEN)).append(Component.literal(", and "))
                             .append(Component.literal("Mark Canute").withStyle(ChatFormatting.OBFUSCATED).withStyle(ChatFormatting.RED)).append(Component.literal(" never spoke of his name again. Some say they feared it would call him back. Others say they could not bear to."))),
-                    Filterable.passThrough(Component.literal("In time, even they scattered. Realizing the destructive potential of themselves, they too bound their powers into three objects each, leaving behind the world they had shaped.")),
+                    Filterable.passThrough(Component.literal("In time, even they scattered. Realizing the destructive potential of themselves, they too bound their powers into three objects each, so that if that item were to be crafted again, it would be infused with their power.")),
                     Filterable.passThrough(Component.literal("Legend has it that ")
                             .append(Component.literal("Harald Bane").withStyle(ChatFormatting.OBFUSCATED).withStyle(ChatFormatting.BLUE))
                             .append(Component.literal(" is still out there, along with the other three fragments of his power, waiting one day to be gathered and delivered back to their original wielder.")))
@@ -203,10 +204,33 @@ public static final Item HOLY_SWORD = registerItem("holy_sword",
                     .rarity(Rarity.EPIC)
                     .useCooldown(2)
                     .component(DataComponents.LORE, new ItemLore(List.of(
-                            Component.literal("The wicked shall burn by the sword of ")
+                            Component.literal("The holy burning sword of ")
                                     .append(Component.literal("Mark Canute").withStyle(ChatFormatting.OBFUSCATED, ChatFormatting.RED))
                     )))
     ));
+
+    public static final RedstoneHammer REDSTONE_HAMMER = (RedstoneHammer) registerItem("redstone_hammer",
+            properties -> new RedstoneHammer(properties.sword(ToolMaterial.NETHERITE,
+                            4.5f, -2.4f)
+                    .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
+                    .component(DataComponents.UNBREAKABLE, Unit.INSTANCE)
+                    .delayedComponent(DataComponents.ENCHANTMENTS, context -> {
+                        Holder<Enchantment> knockback = context.getOrThrow(Enchantments.KNOCKBACK);
+                        Holder<Enchantment> unbreaking = context.getOrThrow(Enchantments.UNBREAKING);
+                        Holder<Enchantment> mending = context.getOrThrow(Enchantments.MENDING);
+                        ItemEnchantments.Mutable mutable = new ItemEnchantments.Mutable(ItemEnchantments.EMPTY);
+                        mutable.set(mending, 1);
+                        mutable.set(knockback, 4);
+                        mutable.set(unbreaking, 5);
+                        return mutable.toImmutable();
+                    })
+                    .rarity(Rarity.EPIC)
+                    .useCooldown(2)
+                    .component(DataComponents.LORE, new ItemLore(List.of(
+                            Component.literal("The raw pummeling power of ")
+                                    .append(Component.literal("Staffan").withStyle(ChatFormatting.OBFUSCATED, ChatFormatting.AQUA))
+                    )))
+            ));
 
     public static final Item WOLF_FANG_TRIDENT = registerItem("wolf_fang_trident",
             properties -> new WolfTrident(properties
@@ -228,10 +252,35 @@ public static final Item HOLY_SWORD = registerItem("holy_sword",
 
     public static final Item WHISTLE = registerItem("whistle", properties -> new WhistleItem(properties.rarity(Rarity.UNCOMMON).stacksTo(1).useCooldown(20)));
 
+    public static final RiftKey RIFT_KEY = (RiftKey) registerItem("rift_key", properties -> new RiftKey(properties.rarity(Rarity.EPIC).stacksTo(1)
+            .component(DataComponents.LORE, new ItemLore(List.of(
+            Component.literal("When used, this key will crate a rift to")
+                    .append(Component.literal("Harald Bane").withStyle(ChatFormatting.OBFUSCATED, ChatFormatting.BLUE)))))));
 
     public static final Item SAVAGE_SPAWN_EGG = registerItem("savage_spawn_egg", properties -> new SpawnEggItem(properties.spawnEgg(ModEntityTypes.SAVAGE)));
 
     public static final Item SHATTERGUARD_SPAWN_EGG = registerItem("shatterguard_spawn_egg", properties -> new SpawnEggItem(properties.spawnEgg(ModEntityTypes.SHATTERGUARD)));
+
+
+    public static final Item CLASSIC_OAK_SAPLING = Registry.register(
+            BuiltInRegistries.ITEM,
+            Identifier.fromNamespaceAndPath(Deliverance.MOD_ID, "classic_oak_sapling"),
+            new BlockItem(ModBlocks.CLASSIC_OAK_SAPLING,
+                    new Item.Properties()
+                            .useBlockDescriptionPrefix()
+                            .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Deliverance.MOD_ID, "classic_oak_sapling")))
+                            .food(new FoodProperties.Builder()
+                                    .nutrition(2)
+                                    .saturationModifier(0.3f)
+                                    .build()
+                            )
+            )
+    );
+
+    public static final Item BLOOD_DROPPER = registerItem("blood_dropper", properties -> new BloodDropper(properties.rarity(Rarity.UNCOMMON).stacksTo(1).useCooldown(20)));
+
+
+
 
 
 
@@ -267,6 +316,7 @@ public static final Item HOLY_SWORD = registerItem("holy_sword",
             output.accept(UNBREAKABLE_PICKAXE);
             output.accept(HOLY_SWORD);
             output.accept(WOLF_FANG_TRIDENT);
+            output.accept(REDSTONE_HAMMER);
         });
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(output-> {
@@ -277,11 +327,13 @@ public static final Item HOLY_SWORD = registerItem("holy_sword",
             output.accept(STORY_BOOK);
             output.accept(UNBREAKABLE_PICKAXE);
             output.accept(WHISTLE);
+            output.accept(BLOOD_DROPPER);
         });
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FOOD_AND_DRINKS).register(output-> {
             output.accept(NOTCH_CORE);
             output.accept(NOTCH_APPLE);
+            output.accept(CLASSIC_OAK_SAPLING);
         });
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.SPAWN_EGGS).register(output-> {

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/lectern",
+  "textures": {
+    "base": "quest:block/cursed_lectern_base",
+    "front": "quest:block/cursed_lectern_front",
+    "sides": "quest:block/cursed_lectern_sides",
+    "top": "quest:block/cursed_lectern_top"
+  }
+}
