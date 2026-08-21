@@ -1,4 +1,4 @@
-Deliverance Mod
+# Deliverance Mod
 
 A Minecraft mod that expands the world with new tools, weapons, blocks, and a deep lore-driven crafting system.
 📖 Overview
@@ -7,202 +7,46 @@ Deliverance is a lore-rich Minecraft mod that introduces a new progression syste
 
 Mod ID: deliverance
 API: Fabric
-🔥 Key Features
+🔥 Features
 
-    Staffan's Crafter – A special crafting table that creates legendary items.
+    Staffan's Crafter – special crafting table for legendary items.
 
-    Cursed Lectern – Applies weakness to nearby mobs when fed Runestone.
+    Cursed Lectern – feed it Runestone to weaken nearby mobs.
 
-    Runestone Tools – Diamond-tier tools upgraded with Runestone.
+    Runestone tools – diamond‑level gear upgraded via smithing template.
 
-    Legendary Artifacts – 4 epic weapons tied to the ancient beings.
+    4 legendary artifacts – unbreakable weapons tied to ancient beings.
 
-    Classic Blocks – Nostalgic blocks from older versions of Minecraft.
+    Classic blocks – nostalgic grass, dirt, stone, logs, etc.
 
-    New Mobs – Savage and Shatterguard mobs with spawn eggs.
+    2 new mobs – Savage and Shatterguard.
 
-    Lore Book – Tells the story of the Great Partition.
+    Story Book – tells the lore of the Great Partition.
 
-    Whistle – Useful utility item (functionality may vary).
+### Crafting the Staffan's Crafter (normal crafting table)
 
-🛠️ Staffan's Crafter
+Before you can use the Staffan's Crafter, you must craft one in a **regular crafting table**.
 
-A special crafting block used to create legendary items.
-Recipe
-text
+| Result | Recipe (3×3) | Legend |
+|--------|--------------|--------|
+| **Staffan's Crafter** | `[ ] [L] [ ]`<br>`[R] [I] [R]`<br>`[I] [C] [I]` | **L** = Lapis Lazuli<br>**R** = Polished Runestone<br>**I** = Iron Ingot<br>**C** = Crafter |
 
-   L
- R I R
- I C I
+---
 
-    L = Lapis Lazuli
+###Recipes inside Staffan's Crafter
 
-    R = Polished Runestone
+All recipes below are crafted **inside** the Staffan's Crafter block.
 
-    I = Iron Ingot
+| Result | Recipe (3×3) | Legend |
+|--------|--------------|--------|
+| **Runestone Upgrade Smithing Template** | `[C] [C] [C]`<br>`[C] [R] [C]`<br>`[C] [C] [C]` | **C** = Polished Runestone<br>**R** = Netherite Ingot |
+| **King's Apple** | `[C] [C] [C]`<br>`[C] [R] [C]`<br>`[C] [C] [C]` | **C** = Gold Block<br>**R** = King's Apple Core |
+| **Wolf Fang Trident** | `[R] [F] [F]`<br>`[R] [T] [F]`<br>`[R] [R] [R]` | **F** = Ancient Wolf Fang<br>**R** = Polished Runestone<br>**T** = Trident |
+| **Redstone Hammer** | `[P] [R] [P]`<br>`[L] [F] [L]`<br>`[L] [F] [L]` | **P** = Piston<br>**R** = Redstone Block<br>**F** = Nether Brick Fence<br>**L** = Leather |
 
-    C = Crafter
 
-📚 Cursed Lectern
 
-When you use a Runestone or Polished Runestone on this lectern, it applies Weakness to all living entities within a 32-block radius (except the player).
 
-    Runestone → Weakness I for 5 minutes
-
-    Polished Runestone → Weakness II for 3 minutes
-
-🧱 Blocks
-Block	Description
-Ancient Stone Bricks	Decorative building block
-Runestone Ore	Drops Runestone when mined
-Runestone Block	Storage block for Runestone
-Polished Runestone Block	Decorative variant
-Classic Grass / Dirt / Stone	Nostalgic blocks from classic Minecraft
-Classic Oak Log / Planks / Leaves / Sapling	Classic wood types
-Classic Cobblestone / Bricks / Bedrock	Classic building blocks
-Classic Crafting Table	Nostalgic crafting table
-⚔️ Tools & Weapons
-Runestone Tools
-
-Upgrade diamond tools using the Runestone Upgrade Smithing Template:
-Tool	Stats
-Runestone Sword	4 attack damage, -2.4 attack speed
-Runestone Pickaxe	1.5 attack damage, -2.8 attack speed
-Runestone Axe	7 attack damage, -3.0 attack speed
-Runestone Shovel	2 attack damage, -3.0 attack speed
-Runestone Hoe	-2.5 attack damage, -3.0 attack speed
-Runestone Spear	Special spear properties
-Legendary Artifacts
-Item	Owner	Special Properties
-Unbreakable Pickaxe	Harald Bane	Unbreakable, Lightning effect
-Holy Sword	Mark Canute	Unbreakable, Smite VII
-Redstone Hammer	Staffan	Unbreakable, Knockback IV, Unbreaking V, Mending I
-Wolf Fang Trident	Sandra	Unbreakable, Loyalty V
-🍎 Special Items
-Item	Description
-King's Apple Core	Epic rarity, needed to craft the King's Apple
-King's Apple	Powerful food with Absorption IV, Regeneration II, Fire Resistance, Resistance II, Night Vision, Invisibility
-Ancient Wolf Fang	Used to craft the Wolf Fang Trident
-Runestone	Core material, found in ore
-Polished Runestone	Crafted from Runestone using a stonecutter
-Cursed Book	Rare enchantment book
-Whistle	Utility item
-Rift Key	Creates a rift to Harald Bane (crafted from legendary artifacts)
-Blood Dropper	Utility item
-Story Book	Contains the lore of the Great Partition
-Music Disc (Downed)	Unique music disc
-📝 Crafting Recipes
-Staffan's Crafter
-text
-
- L
-R I R
-I C I
-
-    L = Lapis Lazuli
-
-    R = Polished Runestone
-
-    I = Iron Ingot
-
-    C = Crafter
-
-Runestone Upgrade Smithing Template
-
-Staffan's Crafter Recipe
-text
-
-C C C
-C R C
-C C C
-
-    C = Polished Runestone
-
-    R = Netherite Ingot
-
-King's Apple
-
-Staffan's Crafter Recipe
-text
-
-C C C
-C R C
-C C C
-
-    C = Gold Block
-
-    R = King's Apple Core
-
-Wolf Fang Trident
-
-Staffan's Crafter Recipe
-text
-
-R F F
-R T F
-R R R
-
-    F = Ancient Wolf Fang
-
-    R = Polished Runestone
-
-    T = Trident
-
-Redstone Hammer
-
-Staffan's Crafter Recipe
-text
-
-P R P
-L F L
-L F L
-
-    P = Piston
-
-    R = Redstone Block
-
-    F = Nether Brick Fence
-
-    L = Leather
-
-Runestone Tool Upgrades
-
-Using the Runestone Upgrade Smithing Template:
-Base Tool	Result
-Diamond Sword	Runestone Sword
-Diamond Pickaxe	Runestone Pickaxe
-Diamond Axe	Runestone Axe
-Diamond Shovel	Runestone Shovel
-Diamond Hoe	Runestone Hoe
-Diamond Spear	Runestone Spear
-Rift Key
-
-Shapeless Recipe
-
-    Unbreakable Pickaxe + Blood Dropper + Cursed Lectern
-
-Whistle
-text
-
-N N
-
-    N = Iron Nugget
-
-Classic Blocks
-Recipe	Result
-Classic Oak Log → 4 Classic Oak Planks	Shapeless
-4 Classic Oak Planks → Classic Crafting Table	Shaped (2x2)
-Classic Cobblestone → Classic Stone	Smelting
-Runestone Processing
-Recipe	Output
-Runestone Ore → Runestone	Smelting / Blasting
-Runestone → Polished Runestone	Stonecutter
-9 Runestone → Runestone Block	Storage recipe
-9 Polished Runestone → Polished Runestone Block	Storage recipe
-🧬 Mobs
-Mob	Spawn Egg
-Savage	Savage Spawn Egg
-Shatterguard	Shatterguard Spawn Egg
 📖 Lore
 
 The mod includes a Story Book that tells the tale of the Great Partition:
