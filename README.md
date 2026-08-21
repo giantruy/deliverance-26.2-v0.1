@@ -8,7 +8,7 @@ Deliverance is a lore-rich Minecraft mod that introduces a new progression syste
 Mod ID: deliverance,
 API: Fabric
 
-##🔥 Features
+## 🔥 Features
 
     Staffan's Crafter – special crafting table for legendary items.
 
