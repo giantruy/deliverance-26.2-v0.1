@@ -5,9 +5,10 @@ A Minecraft mod that expands the world with new tools, weapons, blocks, and a de
 
 Deliverance is a lore-rich Minecraft mod that introduces a new progression system centered around Runestone and the legendary Staffan's Crafter. The mod tells the story of four ancient beings—Staffan, Sandra, Harald Bane, and Mark Canute—whose powers were split and sealed into powerful artifacts. Your journey is to uncover these artifacts and wield their power.
 
-Mod ID: deliverance
+Mod ID: deliverance,
 API: Fabric
-🔥 Features
+
+##🔥 Features
 
     Staffan's Crafter – special crafting table for legendary items.
 
@@ -33,7 +34,7 @@ Before you can use the Staffan's Crafter, you must craft one in a **regular craf
 
 ---
 
-###Recipes inside Staffan's Crafter
+### Recipes inside Staffan's Crafter
 
 All recipes below are crafted **inside** the Staffan's Crafter block.
 
@@ -49,7 +50,7 @@ All recipes below are crafted **inside** the Staffan's Crafter block.
 
 📖 Lore
 
-The mod includes a Story Book that tells the tale of the Great Partition:
+The mod includes a Story Book that tells the tale of the Great Partition
 
 ## License
 All rights reserved. Do not redistribute or use without permission.
