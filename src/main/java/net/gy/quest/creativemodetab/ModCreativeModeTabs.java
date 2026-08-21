@@ -62,6 +62,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RIFT_KEY);
                         output.accept(ModItems.BLOOD_DROPPER);
                         output.accept(ModBlocks.CURSED_LECTERN);
+                        output.accept(ModItems.REDSTONE_HAMMER);
                     }).build());
 
 

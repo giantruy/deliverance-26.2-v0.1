@@ -83,6 +83,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.CLASSIC_OAK_SAPLING, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.RIFT_KEY, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.BLOOD_DROPPER, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.REDSTONE_HAMMER, ModelTemplates.FLAT_ITEM);
 //        itemModelGenerators.generateFlatItem(ModBlocks.CURSED_LECTERN.asItem(), ModelTemplates.FLAT_ITEM);
 
     }

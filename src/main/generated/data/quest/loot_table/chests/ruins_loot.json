@@ -157,6 +157,16 @@
             }
           ],
           "name": "minecraft:quartz"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "quest:music_disc_downed"
         }
       ],
       "rolls": {

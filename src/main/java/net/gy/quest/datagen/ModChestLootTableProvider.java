@@ -136,6 +136,8 @@ public class ModChestLootTableProvider extends SimpleFabricLootTableSubProvider 
                                 .apply(EnchantRandomlyFunction.randomApplicableEnchantment(registries)
                                         .withOptions(nonCurseEnchantments))
                                 .when(LootItemRandomChanceCondition.randomChance(0.15f)))
+                        .add(LootItem.lootTableItem(ModItems.MUSIC_DISC_DOWNED)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f))))
 
 
                 )
@@ -166,6 +168,8 @@ public class ModChestLootTableProvider extends SimpleFabricLootTableSubProvider 
                         .add(LootItem.lootTableItem(Items.IRON_SWORD)
                                 .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f)))
                                 .when(LootItemRandomChanceCondition.randomChance(0.15f)))
+                        .add(LootItem.lootTableItem(ModItems.MUSIC_DISC_DOWNED)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f))))
                 )
         );
 
@@ -197,6 +201,8 @@ public class ModChestLootTableProvider extends SimpleFabricLootTableSubProvider 
                         .add(LootItem.lootTableItem(Items.QUARTZ)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(3, 8)))
                                 .when(LootItemRandomChanceCondition.randomChance(0.15f)))
+                        .add(LootItem.lootTableItem(ModItems.MUSIC_DISC_DOWNED)
+                                .apply(SetItemCountFunction.setCount(ConstantValue.exactly(1.0f))))
                 )
         );
     }
