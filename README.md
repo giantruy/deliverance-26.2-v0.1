@@ -31,7 +31,7 @@ A special crafting block used to create legendary items.
 Recipe
 text
 
-  L
+   L
  R I R
  I C I
 
