@@ -1,32 +1,30 @@
 # Deliverance Mod
 
-A Minecraft mod that expands the world with new tools, weapons, blocks, and a deep lore-driven crafting system.
-📖 Overview
+This is a Minecraft mod that expands the world with new tools, weapons, blocks, and a deep lore-driven crafting system. Deliverance is a mod that tries to build and create lore for the Minecraft world, bringing in many characters that you already know.
 
-Deliverance is a lore-rich Minecraft mod that introduces a new progression system centered around Runestone and the legendary Staffan's Crafter. The mod tells the story of four ancient beings—Staffan, Sandra, Harald Bane, and Mark Canute—whose powers were split and sealed into powerful artifacts. Your journey is to uncover these artifacts and wield their power.
-
-Mod ID: deliverance,
+Mod ID: deliverance, 
 API: Fabric
 
-## 🔥 Features
+## Features
+Custom crafting: Staffan's Crafting Table is the main crafting table for most special items in this mod!
+New lore-rich items: Go around your world and find different structures that have custom, vanilla+ (even overpowered) items!
+New music disc!
+New custom dimension and biomes!
+And more!
 
-    Staffan's Crafter – special crafting table for legendary items.
 
-    Cursed Lectern – feed it Runestone to weaken nearby mobs.
+Goals:
+- A boss fight,
+- Custom villager npc
+- More weapons and blocks
+- More procedurally generated structures
+- and even more.
 
-    Runestone tools – diamond‑level gear upgraded via smithing template.
-
-    4 legendary artifacts – unbreakable weapons tied to ancient beings.
-
-    Classic blocks – nostalgic grass, dirt, stone, logs, etc.
-
-    2 new mobs – Savage and Shatterguard.
-
-    Story Book – tells the lore of the Great Partition.
+- This project is currently half on hiatus, due to me being busy. 
 
 ### Crafting the Staffan's Crafter (normal crafting table)
 
-Before you can use the Staffan's Crafter, you must craft one in a **regular crafting table**.
+Before you can use the Staffan's Crafter, you must craft one in a regular crafting table with the recipe below.
 
 | Result | Recipe (3×3) | Legend |
 |--------|--------------|--------|
@@ -36,7 +34,7 @@ Before you can use the Staffan's Crafter, you must craft one in a **regular craf
 
 ### Recipes inside Staffan's Crafter
 
-All recipes below are crafted **inside** the Staffan's Crafter block.
+All special recipes are crafted inside the Staffan's Crafter block. In future versions, these recipes will be included inside the mod.
 
 | Result | Recipe (3×3) | Legend |
 |--------|--------------|--------|
@@ -45,10 +43,7 @@ All recipes below are crafted **inside** the Staffan's Crafter block.
 | **Wolf Fang Trident** | `[R] [F] [F]`<br>`[R] [T] [F]`<br>`[R] [R] [R]` | **F** = Ancient Wolf Fang<br>**R** = Polished Runestone<br>**T** = Trident |
 | **Redstone Hammer** | `[P] [R] [P]`<br>`[L] [F] [L]`<br>`[L] [F] [L]` | **P** = Piston<br>**R** = Redstone Block<br>**F** = Nether Brick Fence<br>**L** = Leather |
 
-
-
-
-📖 Lore
+## Lore
 
 The mod includes a Story Book that tells the tale of the Great Partition
 
